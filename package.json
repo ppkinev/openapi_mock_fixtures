@@ -1,0 +1,17 @@
+{
+  "name": "api_mock",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@stoplight/prism-cli": "^3.3.6"
+  },
+  "dependencies": {
+    "axios": "^0.19.2"
+  },
+  "scripts": {
+    "mock_server": "yarn prism mock schemas/example.oas3.yaml -d -p 4010",
+    "build_fixtures": "cross-env SERVER_PORT=4010 SPEC_PATH=schemas/example.oas3.yaml node build_fixtures.js",
+    "build": "rm -rf fixtures/ ; mkdir fixtures ; yarn run build_fixtures"
+  }
+}
