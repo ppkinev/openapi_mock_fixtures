@@ -7,7 +7,7 @@
     "@stoplight/prism-cli": "^3.3.6"
   },
   "dependencies": {
-    "axios": "^0.19.2"
+    "axios": "^0.21.1"
   },
   "scripts": {
     "mock_server": "yarn prism mock schemas/example.oas3.yaml -d -p 4010",
